@@ -108,23 +108,21 @@ background-color: rgb(170, 170, 170);
 
 #popupBillede {
     width: 100%;
+    padding-top: 9px;
 }
 
 #popupKnap {
     position: relative;
-    top: -5%;
     left: 1%;
+    bottom: 2%;
 }
 
 #popupOverskrift {
    left: 0.7em;
 }
 
-
-
 #beskrivelser p {
-    position: relative;
-    left: 1.3em;
+padding-left: 5px;
 }
 
 #beskrivelser {
