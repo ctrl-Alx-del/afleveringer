@@ -16,6 +16,8 @@ visRetter(retter)
 
 hentRetter();
 
+
+
 function visRetter(retter){
 const template = document.querySelector("template").content;
 const alleRetter = document.querySelector("#indhold");
@@ -30,12 +32,13 @@ retter.forEach(ret => {
         klon.querySelector("img").src = "images/medium/" + ret.billednavn + "-md.jpg";
         klon.querySelector("#beskrivelse").textContent = ret.kortbeskrivelse;
         klon.querySelector("#pris").textContent = `Pris ${ret.pris},-`;
+        klon.querySelector(".retterSamlet").addEventListener("click", ()=> visRet(ret));
         alleRetter.appendChild(klon);
     }
 });    
 }
 
-const hverKnap = document.querySelectorAll("button"); 
+const hverKnap = document.querySelectorAll("#knapper button"); 
 
 function knapFunktionalitet(){
     hverKnap.forEach(element => {
@@ -51,3 +54,24 @@ document.querySelector(".valgt").classList.remove("valgt");
 this.classList.add("valgt");
 visRetter(retter);
 }
+
+document.querySelector("#popupKnap").addEventListener("click", forsvindKnap);
+
+function forsvindKnap(){
+    popup.style.display = "none"
+    }
+
+
+const popup = document.querySelector("#popup");
+
+    function visRet(ret){
+        console.log("klikket på");
+       
+    popup.style.display = "flex";
+    popup.querySelector("h2").textContent = ret.navn; 
+    popup.querySelector("img").src = "images/medium/" + ret.billednavn + "-md.jpg";
+    popup.querySelector("p").textContent = ret.kortbeskrivelse;
+    popup.querySelector("p+p").textContent = `Pris ${ret.pris},-`;
+    }
+
+

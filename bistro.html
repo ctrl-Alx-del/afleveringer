@@ -16,6 +16,8 @@
 </header>
 <main>
 
+  
+
 <div id="knapper">
     <button data-kategori="alle" class="valgt">Alle</button>
     <button data-kategori="forretter">Forretter</button>
@@ -32,15 +34,39 @@
     
     <template>
         <div class="retterSamlet">
+            <img class="billedretter" src="" alt="">
             <div class="retInfo">
-                <img class="billedretter" src="" alt="">
-                <h3></h3>
-                <p id="beskrivelse"></p>
-                <p id="pris"></p>
+                <div>
+                    <h3></h3>
+                    <p id="beskrivelse"></p>
+                </div>
+                <div>
+                    <p id="pris"></p>
+                </div>
             </div>
         </div>
     </template>
+
+
+    <div id="popup">
+        <article id="popupArticle">
+            <button id="popupKnap">X</button>
+            <div id="grid-container">
+                <div id="overIndhold">
+                    <img id="popupBillede" src="" alt="">
+                <h2 id="popupOverskrift"></h2>
+                </div>
+                <div id="beskrivelser">
+                    <p></p>
+                    <p id="pris"></p>
+                </div>
+            </div>
+        </article>
+    </div>
+
 </main>
+
+
 
 <script src="script.js"></script>
 
